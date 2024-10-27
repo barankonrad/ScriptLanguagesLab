@@ -1,7 +1,4 @@
 # Tic-Tac-Toe Game in Bash
-
-## Description
-
 Simple implementation of the classic Tic-Tac-Toe game written in Bash
 
 ## Features

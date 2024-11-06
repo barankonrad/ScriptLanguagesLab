@@ -5,3 +5,4 @@ This repository presents projects developed in the *Scripting Languages* course 
 ## Projects
 Projects by their programming language:
 - Bash: [Tic Tac Toe](bash-tictactoe)
+- Python: [Messenger restaurant chatbot](python-chatbot)

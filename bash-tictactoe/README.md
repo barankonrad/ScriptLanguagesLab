@@ -8,7 +8,7 @@ Simple implementation of the classic Tic-Tac-Toe game written in Bash
 - **Play Against "AI"**: The game supports a mode where players can compete against a computer opponent, which chooses randomly available fields as his move
 - **Colored interface**: Players markers are colored for better visibility
 
-## How to Run
+## How to run
 
 1. Clone or download the repository to your local machine.
 2. Open a terminal and navigate to the directory containing the script.
@@ -27,3 +27,12 @@ Simple implementation of the classic Tic-Tac-Toe game written in Bash
 3. Players will take turns to choose a spot on the board by entering a number from $1$ to $9$, corresponding to the position on the grid.
 4. If a player wants to save the current game state and exit, they can enter `S`.
 5. The game will announce the winner or declare a draw when appropriate.
+
+## Save example
+
+_game_save.txt_
+```
+1                      <-- game mode
+1                      <-- player turn
+ , ,X, ,O,X, , ,       <-- board
+```

@@ -30,3 +30,12 @@ Simple implementation of the classic Tic-Tac-Toe game written in Bash
 3. Players will take turns to choose a spot on the board by entering a number from $1$ to $9$, corresponding to the position on the grid.
 4. If a player wants to save the current game state and exit, they can enter `S`.
 5. The game will announce the winner or declare a draw when appropriate.
+
+## Save example
+
+_game_save.txt_
+```
+1                      <-- game mode
+1                      <-- player turn
+ , ,X, ,O,X, , ,       <-- board
+```

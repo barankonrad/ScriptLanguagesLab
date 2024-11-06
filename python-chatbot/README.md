@@ -36,3 +36,19 @@ rasa train
 rasa run actions
 rasa shell
 ```
+
+
+## Example
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/7ae64433-d093-48c4-b7e4-474e2029e421" width="687" alt="Screenshot 1">
+  <p><i>Screenshot 1: menu check and pickup order</i></p>
+
+  <img src="https://github.com/user-attachments/assets/ca0ae4d6-7df2-405e-b224-125aee36cf82" width="687" alt="Screenshot 2">
+  <p><i>Screenshot 2: simple delivery order</i></p>
+
+  <img src="https://github.com/user-attachments/assets/65d86cff-084d-4d2b-a7a8-2048ec6a4ba0" width="687" alt="Screenshot 3">
+  <p><i>Screenshot 3: item not available, order canceled and change</i></p>
+
+  <img src="https://github.com/user-attachments/assets/23c8daeb-54aa-4b16-81cf-629200f35913" width="687" alt="Screenshot 4">
+  <p><i>Screenshot 4: question about open hours</i></p>
+</div>

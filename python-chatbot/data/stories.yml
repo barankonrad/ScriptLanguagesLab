@@ -1,0 +1,87 @@
+version: "3.1"
+
+stories:
+  - story: order for pickup with cancellation and reordering
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: order
+        entities:
+          - food_item: "pizza"
+      - slot_was_set:
+          - order: [ "pizza" ]
+      - action: sum_up_order
+      - action: utter_ask_for_confirmation
+      - intent: affirm
+      - action: utter_ask_order_type
+      - intent: confirm_pickup
+      - action: register_pickup_order
+      - action: utter_order_done
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: order for delivery with address confirmation
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: order
+        entities:
+          - food_item: "pizza"
+          - food_item: "burger"
+      - slot_was_set:
+          - order: [ "pizza", "burger" ]
+      - action: sum_up_order
+      - action: utter_ask_for_confirmation
+      - intent: affirm
+      - action: utter_ask_order_type
+      - intent: confirm_delivery
+      - action: utter_ask_delivery_address
+      - intent: address
+        entities:
+          - address: "123 Main St"
+      - slot_was_set:
+          - address: "123 Main St"
+      - action: register_delivery_order
+      - action: utter_order_done
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: viewing menu and ordering
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: menu
+      - action: retrieve_menu
+      - intent: order
+        entities:
+          - food_item: "pizza"
+      - slot_was_set:
+          - order: [ "pizza" ]
+      - action: sum_up_order
+      - action: utter_ask_for_confirmation
+      - intent: affirm
+      - action: utter_ask_order_type
+      - intent: confirm_pickup
+      - action: register_pickup_order
+      - action: utter_order_done
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: viewing opening hours and placing an order
+    steps:
+      - intent: opening_hours
+      - action: retrieve_opening_hours
+      - intent: order
+        entities:
+          - food_item: "lasagne"
+      - slot_was_set:
+          - order: [ "lasagne" ]
+      - action: sum_up_order
+      - action: utter_ask_for_confirmation
+      - intent: affirm
+      - action: utter_ask_order_type
+      - intent: confirm_pickup
+      - action: register_pickup_order
+      - action: utter_order_done
+      - intent: goodbye
+      - action: utter_goodbye

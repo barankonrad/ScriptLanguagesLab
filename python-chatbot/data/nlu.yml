@@ -1,0 +1,179 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hello
+      - Hi
+      - Hey
+      - Good morning
+      - Good evening
+      - Howdy
+      - What's up?
+      - Hello there
+      - Hi, can you help me?
+      - Hey bot!
+
+  - intent: goodbye
+    examples: |
+      - Goodbye
+      - Bye
+      - See you later
+      - Have a nice day
+      - I'm leaving now
+      - Catch you later
+      - Farewell
+      - Take care
+      - Bye bye
+      - Thanks, goodbye!
+
+  - intent: affirm
+    examples: |
+      - Yes
+      - Yeah
+      - Yup
+      - Sure
+      - Absolutely
+      - Of course
+      - Definitely
+      - Right
+      - Correct
+      - That’s right
+      - Confirm
+      - Go ahead
+      - Thank you, that's all
+      - That's all for now
+      - I’m done with my order
+      - That’s everything
+      - I don't need anything else
+      - That will be it, thanks
+      - Finished ordering
+      - No more items, thank you
+
+  - intent: deny
+    examples: |
+      - No
+      - Nope
+      - Nah
+      - I don’t think so
+      - Not really
+      - No, thanks
+      - I don't want that
+      - Not interested
+      - Not this time
+      - Not yet
+      - Cancel
+
+  - intent: order
+    examples: |
+      - I would like to order a [pizza](food_item).
+      - Can I get a [spaghetti carbonara](food_item) and a [burger](food_item)?
+      - I want to order [focaccia](food_item) with a glass of [water](food_item).
+      - I will have [lasagne](food_item) and a [beer](food_item).
+      - I want [spaghetti carbonara](food_item), a [cocktail](food_item), and [tiramisu](food_item).
+      - Can I get a [hot-dog](food_item) with a side of [salad](food_item)?
+      - I would like [pizza](food_item) and a glass of [prosecco](food_item).
+      - I want to order two [burgers](food_item) and a [beer](food_item).
+      - Can I get a [pizza](food_item) and a [hot-dog](food_item) for dinner?
+      - I would like [lasagne](food_item) and [tiramisu](food_item) to share.
+      - Can I order [spaghetti carbonara](food_item) and a [cocktail](food_item)?
+      - I want [pizza](food_item) and a [burger](food_item) for my meal.
+      - I will have [lasagne](food_item) with [prosecco](food_item).
+      - I want to order [pasta](food_item), [focaccia](food_item), and [beer](food_item).
+      - Can I get a [pizza](food_item) with a [cocktail](food_item) and [tiramisu](food_item)?
+      - I'd like to order a [hot-dog](food_item) with a side of [fries](food_item).
+      - Please give me a [burger](food_item) with extra [cheese](food_item) and [onions](food_item).
+      - Can I get [lasagne](food_item), a [pizza](food_item), and a [cocktail](food_item) for the table?
+      - I'd like a [spaghetti carbonara](food_item) and a [hot-dog](food_item).
+      - I want a [burger](food_item) with [spaghetti carbonara](food_item) on the side.
+      - I'd like to order a [tiramisu](food_item) and a [hot-dog](food_item).
+      - Can I get a [pizza](food_item), [burger](food_item), and a [beer](food_item) for dinner?
+      - I'll have a [lasagne](food_item) with a [tiramisu](food_item) for dessert.
+
+  - intent: show_order
+    examples: |
+      - What is my order?
+      - Show me my current order
+      - Can you tell me what I ordered?
+      - What do I have in my order?
+      - Please show my order
+      - Display my order details
+
+  - intent: cancel_order
+    examples: |
+      - Cancel my order
+      - I want to cancel my order
+      - Please cancel my order
+      - Reset my order
+      - Clear my order
+      - Start over with my order
+
+  - intent: confirm_pickup
+    examples: |
+      - Pickup
+      - It's for pickup
+      - I will pick it up
+      - Yes, I'm coming to get it
+      - Pickup, please
+      - I want to pick it up
+
+  - intent: confirm_delivery
+    examples: |
+      - Delivery
+      - It's for delivery
+      - I want it delivered
+      - Yes, deliver it
+      - Delivery, please
+      - I want it delivered to my address
+
+  - intent: opening_hours
+    examples: |
+      - What are your opening hours?
+      - When are you open?
+      - What time does the restaurant open?
+      - Until what time are you open?
+      - Can you tell me your working hours?
+      - When do you open and close?
+      - What are the restaurant hours?
+      - Are you open right now?
+      - Can I come now?
+
+  - intent: menu
+    examples: |
+      - Can I see the menu?
+      - What do you have on the menu?
+      - Show me your menu
+      - What’s on the menu today?
+      - I'd like to see the menu
+      - Do you have a menu I can look at?
+      - Can you show me the available dishes?
+      - What are your food options?
+      - What can I order?
+      - What can I get?
+      - What do you have?
+      - What do you offer?
+
+  - intent: address
+    examples: |
+      - My address is [123 Main Street](address)
+      - Please deliver to [456 Oak Avenue](address)
+      - The address is [789 Pine Road, Apartment 5B](address)
+      - Send it to [321 Elm Street](address)
+      - I live at [555 Maple Drive](address)
+      - Ship it to [1600 Pennsylvania Avenue NW, Washington, DC](address)
+      - Deliver to [10 Downing Street, London](address)
+      - [742 Evergreen Terrace](address), please
+      - It should go to [22B Baker Street, London](address)
+      - [Dietla 1](address)
+
+  - intent: bot_challenge
+    examples: |
+      - Are you a bot?
+      - Are you real?
+      - Are you human or a bot?
+      - Who made you?
+      - What are you?
+      - Are you an AI?
+      - Do you have feelings?
+      - Are you a machine?
+      - Are you sentient?

@@ -1,0 +1,77 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - order
+  - show_order
+  - cancel_order
+  - confirm_pickup
+  - confirm_delivery
+  - opening_hours
+  - menu
+  - address
+  - bot_challenge
+
+actions:
+  - sum_up_order
+  - action_reset_order
+  - retrieve_opening_hours
+  - retrieve_menu
+  - register_pickup_order
+  - register_delivery_order
+
+entities:
+  - food_item
+  - address
+
+slots:
+  order:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: food_item
+
+  address:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+
+responses:
+  utter_greet:
+    - text: "Hello! Welcome to our restaurant. How can I assist you today?"
+
+  utter_goodbye:
+    - text: "Thank you for visiting! Have a great day!"
+
+  utter_iamabot:
+    - text: "I'm a virtual assistant here to help you with your order."
+
+  utter_cancel_order:
+    - text: "Okay, canceled. What would you like to order instead?"
+
+  utter_show_order:
+    - text: "Your current order is: {order}."
+
+  utter_ask_for_confirmation:
+    - text: "Do you confirm the order?"
+
+  utter_ask_order_type:
+    - text: "Is your order for pickup or delivery?"
+
+  utter_ask_delivery_address:
+    - text: "What's your delivery address?"
+
+  utter_default_fallback:
+    - text: "Sorry, I didn't quite get that. Can you please rephrase?"
+
+  utter_order_done:
+    - text: "Your order is done! Thank you for choosing our service!"
+
+session_config:
+  session_expiration_time: 5
+  carry_over_slots_to_new_session: false

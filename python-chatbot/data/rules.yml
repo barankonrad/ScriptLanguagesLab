@@ -1,0 +1,75 @@
+rules:
+  - rule: Greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Goodbye response
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Reset order when user cancels
+    steps:
+      - intent: cancel_order
+      - action: utter_cancel_order
+      - action: action_reset_order
+
+  - rule: Ask for confirmation after order summary
+    steps:
+      - action: sum_up_order
+      - action: utter_ask_for_confirmation
+
+  - rule: Ask for order type
+    steps:
+      - action: sum_up_order
+      - action: utter_ask_for_confirmation
+      - intent: affirm
+      - action: utter_ask_order_type
+
+  - rule: Cancel on denial
+    steps:
+      - action: sum_up_order
+      - action: utter_ask_for_confirmation
+      - intent: deny
+      - action: utter_cancel_order
+      - action: action_reset_order
+
+  - rule: Confirm pickup order and complete order registration
+    steps:
+      - action: utter_ask_order_type
+      - intent: confirm_pickup
+      - action: register_pickup_order
+      - action: utter_order_done
+
+  - rule: Ask for address
+    steps:
+      - action: utter_ask_order_type
+      - intent: confirm_delivery
+      - action: utter_ask_delivery_address
+
+  - rule: Confirm pickup order and complete order registration
+    steps:
+      - intent: address
+      - action: register_delivery_order
+      - action: utter_order_done
+
+  - rule: Show order whenever user asks
+    steps:
+      - intent: show_order
+      - action: utter_show_order
+
+  - rule: Provide opening hours when asked
+    steps:
+      - intent: opening_hours
+      - action: retrieve_opening_hours
+
+  - rule: Provide menu when asked
+    steps:
+      - intent: menu
+      - action: retrieve_menu
+
+  - rule: Respond to bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot

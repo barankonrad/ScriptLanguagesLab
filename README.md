@@ -8,3 +8,4 @@ Projects by their programming language:
 - Python: [Messenger restaurant chatbot](python-chatbot)
 - Javascript: [Minecraft castle generator script](javascript-minecraft)
 - Ruby: [Amazon crawler](ruby-crawler)
+- Lua: [Tetris](lua-tetris)

@@ -7,3 +7,4 @@ Projects by their programming language:
 - Bash: [Tic Tac Toe](bash-tictactoe)
 - Python: [Messenger restaurant chatbot](python-chatbot)
 - Javascript: [Minecraft castle generator script](javascript-minecraft)
+- Ruby: [Amazon crawler](ruby-crawler)

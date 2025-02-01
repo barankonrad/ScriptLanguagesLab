@@ -1,0 +1,26 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Castle building scripts project",
+    "name": "Castle builder",
+    "uuid": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "description": "Castle building scripts",
+      "type": "script",
+      "entry": "scripts/main.js",
+      "language": "javascript",
+      "uuid": "7d9b2e17-6b64-48b1-83dc-4c9fae842fb1",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.7.0"
+    }
+  ]
+}
